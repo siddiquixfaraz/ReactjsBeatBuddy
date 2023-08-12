@@ -1,0 +1,22 @@
+nav {
+    position: absolute;
+    left: 220px;
+    top: 0;
+    right: 0;
+    /* border: 2px solid black; */
+    padding: 20px 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* border: 2px solid black; */
+}
+
+.navbar input {
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    color: white;
+}

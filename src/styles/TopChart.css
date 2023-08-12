@@ -1,0 +1,68 @@
+.top-chart {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    bottom: 300px;
+    width: 400px;
+    /* border: 4px solid saddlebrown; */
+    color: white;
+    padding: 10px 20px;
+}
+
+
+
+.top-songs {
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.top-songs::-webkit-scrollbar {
+    display: none;
+}
+
+.top-chart-header {
+    /* border: 4px solid rgb(22, 242, 22); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+.top-chart-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+    /* border: 2px solid rgb(242, 7, 7); */
+}
+
+.top-chart-card:hover {
+    opacity: 0.7;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.6);
+}
+
+.top-chart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60%;
+    /* border: 2px solid navajowhite; */
+}
+
+.top-chart-card img {
+    width: 60px;
+    height: 60px;
+}
+
+#player-logo {
+    width: 40px;
+    height: 40px;
+}

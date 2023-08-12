@@ -1,0 +1,132 @@
+.hero {
+    position: absolute;
+    left: 220px;
+    top: 70px;
+    bottom: 0;
+    right: 400px;
+    /* border: 2px solid black; */
+    padding: 10px 40px;
+}
+
+.hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hero-top h1 {
+    letter-spacing: 1px;
+}
+
+.hero-top-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 80px;
+    box-shadow: 0 0px 2px rgb(14, 14, 181);
+    cursor: pointer;
+}
+
+/* drop-down */
+.drop-down {
+    position: absolute;
+    display: flex;
+    top: 40px;
+    left: 0;
+    right: 0;
+    border: 2px solid rgb(9, 5, 73);
+    flex-direction: column;
+    cursor: pointer;
+    gap: 3px;
+    opacity: 0;
+    z-index: 3;
+}
+
+.drop-down.drop-down-active {
+    opacity: 1;
+}
+
+.drop-down-items {
+    background-color: rgb(9, 7, 43);
+    color: white;
+    text-align: start;
+    padding: 10px;
+    /* border: 2px solid darkmagenta; */
+}
+
+
+.hero-main {
+    /* border: 2px solid black; */
+    height: 80%;
+    display: flex;
+    padding: 15px;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+.hero-main::-webkit-scrollbar {
+    display: none;
+}
+
+.cards {
+    /* border: 2px solid palevioletred; */
+    position: relative;
+    width: 230px;
+    max-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(24, 24, 162);
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.cards:hover {
+    opacity: 0.8;
+}
+.cards:hover #play-logo{
+    opacity: 1;
+}
+/* #play-logo img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+} */
+
+#play-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    background-color: rgb(67, 67, 60);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hero-main img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
