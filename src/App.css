@@ -19,3 +19,81 @@ body {
 .secondary-text{
     color: #8f93a0;
 }
+
+@media screen and (max-width: 1200px) {
+    .sidebar{
+        display: none;
+    }
+
+    nav {
+        /* border: 4px solid black; */
+        left: 0;
+        right: 0;
+    }
+
+    .hero {
+        left: 0px;
+        /* border: 2px solid black; */
+    
+    }
+
+    .top-chart {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        bottom: 300px;
+        width: 400px;
+        /* border: 4px solid saddlebrown; */
+        color: white;
+        padding: 10px 20px;
+    }
+}
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        /* border: 5px solid palevioletred; */
+        overflow: scroll;
+        position:static;
+        height: auto;
+    }
+
+    nav {
+        position: static;
+        /* border: 4px solid black; */
+    }
+
+    .top-chart {
+        position: static;
+        height: 300px;
+        width: 100%;
+        /* border: 4px solid saddlebrown; */
+        padding: 10px 20px;
+    }
+
+    
+    .hero {
+        position: static;
+        height: 60vh;
+        /* border: 2px solid black; */
+        padding: 10px 20px;
+    }
+
+    .artist-container{
+        position: static;
+        /* border: 2px solid aquamarine; */
+    
+        width: 60%;
+        padding-bottom: 10px;
+        height: 150px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .musics-player{
+        position: sticky;
+        display: none;
+    }
+    
+}

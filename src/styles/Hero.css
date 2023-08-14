@@ -38,17 +38,12 @@
     top: 40px;
     left: 0;
     right: 0;
-    border: 2px solid rgb(9, 5, 73);
     flex-direction: column;
     cursor: pointer;
-    gap: 3px;
-    opacity: 0;
+    gap: 1px;
     z-index: 3;
 }
 
-.drop-down.drop-down-active {
-    opacity: 1;
-}
 
 .drop-down-items {
     background-color: rgb(9, 7, 43);

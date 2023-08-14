@@ -10,7 +10,7 @@ const [songs, setSongs]  = useState(data)
 const [isPlaying,setisPlaying]= useState(false)
 const [nextSong,setNextSong]= useState();
 const [currentSong,setcurrentSong]= useState(data[0]);
-// console.log(currentSong)
+
 let audioElm = useRef();
 
 function playPause(){

@@ -9,6 +9,7 @@
     background: rgb(4, 2, 42);
     background: linear-gradient(180deg, rgba(4, 2, 42, 1) 63%, rgba(5, 5, 87, 1) 84%);
     background-repeat: no-repeat;
+    font-size: 18px;
 }
 
 .logo img {
