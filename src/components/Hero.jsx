@@ -4,8 +4,10 @@ import { faPlay, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import '../styles/Hero.css'
 import data from '../assets/songData.js';
 import { useState } from 'react';
+import { useRef } from 'react';
 
-function Card({ title, artist, imgurl }) {
+function Card({ title, artist,id, imgurl,playPause}) {
+
     return (
         <div className="cards">
             
@@ -13,33 +15,16 @@ function Card({ title, artist, imgurl }) {
             <h3 id="song-name">{artist}</h3>
             <h4 className='secondary-text' id="des">{title}</h4>
             <div id="play-logo">
-                <FontAwesomeIcon icon={faPlay} size="xl" style={{ color: "#fcfcfd",}} onclick={playPause} />
+                <FontAwesomeIcon onClick={playPause} icon={faPlay} size="xl" style={{ color: "#fcfcfd",}}/>
             </div>
         </div>
     )
 }
 
 
-function Hero() {
+function Hero({ playPause,setcurrentSong}) {
     const [dropDown, setDropDown] = useState(false);
-    const [songs, setSongs] = useState(data)
-    const [isPlaying, setisPlaying] = useState(false)
-    const [nextSong, setNextSong] = useState();
-    const [currentSong, setcurrentSong] = useState(data[0]);
-    // console.log(currentSong)
-    let audioElm = useRef();
 
-    function playPause() {
-        setisPlaying(!isPlaying)
-    }
-
-    useEffect(() => {
-        if (isPlaying) {
-            audioElm.current.play();
-        } else {
-            audioElm.current.pause();
-        }
-    }, [isPlaying])
 
 
     function showdropdown() {
@@ -73,7 +58,7 @@ function Hero() {
             <div className="hero-main">
                 {
                     data.map((songs) => (
-                        <Card title={songs.title} artist={songs.artist} imgurl={songs.artwork} />
+                        <Card title={songs.title} artist={songs.artist} imgurl={songs.artwork} audio={songs.audio} playPause={playPause} setcurrentSong={setcurrentSong} id={songs.id}/>
                     ))
                 }
 

@@ -1,21 +1,15 @@
-import React, { useState,useEffect } from 'react'
+import React, {useEffect,useRef } from 'react'
 import '../styles/MusicPlayer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay,faPause, faForward,faBackward } from '@fortawesome/free-solid-svg-icons'
-import data from '../assets/songData.js';
-import { useRef } from 'react';
+// import data from '../assets/songData.js';
 
-function MusicPlayer() {
-const [songs, setSongs]  = useState(data)
-const [isPlaying,setisPlaying]= useState(false)
-const [nextSong,setNextSong]= useState();
-const [currentSong,setcurrentSong]= useState(data[0]);
+function MusicPlayer({songs,isPlaying,setisPlaying,currentSong,setcurrentSong ,audioElm,playPause}) {
 
-let audioElm = useRef();
 
-function playPause(){
-    setisPlaying(!isPlaying)
-}
+// const audioElm = useRef();
+
+
 
 useEffect(() => {
   if(isPlaying){
