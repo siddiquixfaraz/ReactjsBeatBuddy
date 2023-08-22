@@ -19,6 +19,7 @@ function App() {
   function playPause(id){
     setisPlaying(!isPlaying)
   }
+
   return (
     <>
     <Sidebar></Sidebar>

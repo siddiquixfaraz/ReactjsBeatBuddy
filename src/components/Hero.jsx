@@ -6,7 +6,15 @@ import data from '../assets/songData.js';
 import { useState } from 'react';
 import { useRef } from 'react';
 
-function Card({ title, artist,id, imgurl,playPause}) {
+function Card({ title, artist,id, imgurl,playPause,setcurrentSong,songs}) {
+
+    const handleClickSong= ()=>{
+        
+        setcurrentSong(data[id-1]);
+        playPause();
+       
+
+    }
 
     return (
         <div className="cards">
@@ -15,7 +23,7 @@ function Card({ title, artist,id, imgurl,playPause}) {
             <h3 id="song-name">{artist}</h3>
             <h4 className='secondary-text' id="des">{title}</h4>
             <div id="play-logo">
-                <FontAwesomeIcon onClick={playPause} icon={faPlay} size="xl" style={{ color: "#fcfcfd",}}/>
+                <FontAwesomeIcon onClick={handleClickSong} icon={faPlay} size="xl" style={{ color: "#fcfcfd",}}/>
             </div>
         </div>
     )
@@ -24,9 +32,6 @@ function Card({ title, artist,id, imgurl,playPause}) {
 
 function Hero({ playPause,setcurrentSong}) {
     const [dropDown, setDropDown] = useState(false);
-
-
-
     function showdropdown() {
         setDropDown(!dropDown)
     }
@@ -58,7 +63,14 @@ function Hero({ playPause,setcurrentSong}) {
             <div className="hero-main">
                 {
                     data.map((songs) => (
-                        <Card title={songs.title} artist={songs.artist} imgurl={songs.artwork} audio={songs.audio} playPause={playPause} setcurrentSong={setcurrentSong} id={songs.id}/>
+                        <Card title={songs.title} 
+                        artist={songs.artist}
+                        imgurl={songs.artwork}
+                        audio={songs.audio}
+                        playPause={playPause} 
+                        setcurrentSong={setcurrentSong}
+                        id={songs.id}
+                        songs={songs}/>
                     ))
                 }
 
